@@ -20,6 +20,9 @@ app.use("/api", router)
 // Global Error Handler
 app.use(errorHandler)
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+if (require.main === module) {
+
+    app.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
+    });
+}

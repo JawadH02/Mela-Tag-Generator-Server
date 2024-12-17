@@ -11,7 +11,7 @@ const app: Express = express();
 const PORT = process.env.SERVER_PORT || 3000
 
 // Middlewares
-app.use(cors(({ origin: `http://localhost:5173`, optionsSuccessStatus: 200 })))
+app.use(cors(({ origin: `https://mela-tag-generator.vercel.app`, optionsSuccessStatus: 200 })))
 app.use(express.json())
 
 // Routes

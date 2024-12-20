@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "strict": true,
-    "sourceMap": true,
-    "skipLibCheck": true
+    "target": "ES6",               // Target ECMAScript version
+    "module": "NodeNext",            // Use ESNext for modules
+    "rootDir": "src",              // Your source folder
+    "outDir": "dist",              // Output folder for compiled files
+    "strict": true,                // Enable strict type-checking
+    "esModuleInterop": true,       // Enable interop between CommonJS and ESM
+    "skipLibCheck": true,          // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Ensure consistent imports
+    "declaration": true,           // Generate .d.ts files (useful for libraries)
+    "sourceMap": true              // Generate sourcemaps for debugging
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src"],               // Include source files
+  "exclude": ["node_modules", "dist"] // Exclude unnecessary files
 }

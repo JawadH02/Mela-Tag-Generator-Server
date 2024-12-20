@@ -6,12 +6,10 @@ dotenv.config()
 
 export default defineConfig({
   entry: ["src/index.ts"],
-  outDir: "dist",
   format: ["esm", "cjs"],
-  target: "es6",
-  splitting: false,
-  sourcemap: true,
   clean: true,
+  sourcemap: true,
   dts: true,
-  external: ["express", "dotenv"], // Keep external dependencies unbundled
+  minify: false,
+  watch: process.env.NODE_ENV === "development",
 });

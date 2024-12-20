@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"main": "src/index.ts",
 	"scripts": {
-		"build": "tsup",
-		"dev": "nodemon --watch src --exec tsup src/index.ts",
+		"build": "NODE_ENV=production tsup",
+		"dev": "tsup --watch & nodemon dist/index.js",
 		"start": "node dist/index.js"
 	},
 	"keywords": [],
